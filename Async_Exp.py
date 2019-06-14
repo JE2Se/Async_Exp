@@ -39,7 +39,7 @@ if __name__ == "__main__":
     caseCase = int(input("GET请求请输入「1」，POST请求请输入「2」:"))
     if caseCase == 1:
         url = str(input("请输入GET请求的链接："))
-        threadCount = int(input("请输入短信发送的条数："))
+        threadCount = int(input("请输入发送的条数："))
         count = range(threadCount)
         tasks = [asyncio.ensure_future(requestget()) for _ in count]
         loop = asyncio.get_event_loop()
